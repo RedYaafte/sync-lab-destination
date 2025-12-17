@@ -1,4 +1,4 @@
-# Test Sync Repo – Main 😸
+# Test Sync Repo – Main 🥇
 
 Este es un repositorio de prueba para simular sincronización automática de archivos específicos hacia un segundo repositorio (`sync-lab-destination`).
 
