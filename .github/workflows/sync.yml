@@ -1,0 +1,25 @@
+name: Sync to secondary repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
+
+      - name: Add secondary repo as remote
+        run: |
+          git remote add secondary https://${{ secrets.PAT_TOKEN }}@github.com/RedYaafte/sync-lab-destination.git
+
+      - name: Push to secondary repo
+        run: |
+          git push secondary main --force
