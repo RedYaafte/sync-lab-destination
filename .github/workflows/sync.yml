@@ -3,7 +3,7 @@ name: Sync to secondary repo
 on:
   push:
     branches:
-      - main
+      - stripe-main
 
 jobs:
   sync:
